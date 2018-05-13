@@ -11,10 +11,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link href="./css/fontawesome-all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
+  <script src="./main.js"></script>
 </head>
-<body> 
 
+<body> 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="./index.html">Mobi</a>
@@ -47,15 +47,18 @@
       <h1 class="display-2">Mobi</h1>
       <h2 class="lead">Ya'll want to get learnt?</h2>
       <button type="button" href="#" class="btn btn-primary">How to Join</button>
-      <button type="button" href="#" class="btn btn-primary">About Us</button>
+      <button type="button" href="./pages/About.html" class="btn btn-primary">About Us</button>
     </div>
   </div>
   
+  <!-- Calandar Card Showing next workshop -->
   <div class="row justify-content-md-center">
     <div class="card col-sm-12 col-md-6 border-dark">
         <div class="card-body">
-          <h5 class="card-title">Our next workshop...</h5>
-          <p class="card-text"> Nedderman Hall 105</p>
+          <h5 id="calandarCardTitle" class="card-title"> Our next workshop...</h5>
+          <p id="calandarCardDate" class="card-text"></p>
+          <p id="calandarCardLocation" class="card-text" ></p>
+          <p id="calandarCarDescription" class="card-text"></p>
         </div>
     </div>
   </div>
@@ -69,34 +72,40 @@
         <i href="#" class="fal fa-calendar-alt fa-5x"></i>
         <h3> Calendar </h3>
         <p> Our Mobi Calendar is always up-to-date on all our events, parties, and any hackathons our members find interesting and cool</p>
-        <button type="button" href="#" class="btn btn-primary">Calendar</button>
+        <a href="https://calendar.google.com/calendar/embed?src=uta.mobi%40gmail.com&ctz=America%2FChicago">
+          <button type="button" href="#" class="btn btn-primary">Calendar</button>
+        </a>
 
       </div>
       <div class="col">
         <i href="#" class="fab fa-facebook-square fa-5x"></i>
         <h3> Facebook </h3>
         <p> Check out our Facebook page for upcoming events and updates. We post live streams and facebook events here </p>
-        <button type="button" href="#" class="btn btn-primary">Facebook</button>
-
+        <a href="https://www.facebook.com/MOBI.UTA/">
+          <button type="button" href="#" class="btn btn-primary">Facebook</button>
+        </a>
       </div>
     </div>
   </div>
 
 <!-- Register for email List -->
-<div class="container text-center">
-    <h2> FAQ </h2>
+<h2 class="text-center"> FAQ </h2>
+<div class="container">
     <div class="row">
       <div class="col-sm">
-        <p> <strong> FAQ STUFF </strong> </p>
-        <p> FAQ STUFF </p>
-        <p> <strong> FAQ STUFF </strong> </p>
-        <p> FAQ STUFF </p>
-        <p> <strong> FAQ STUFF </strong> </p>
-        <p> FAQ STUFF </p>
-        <p> <strong> FAQ STUFF </strong> </p>
-        <p> FAQ STUFF </p>
-        <p> <strong> FAQ STUFF </strong> </p>
-        <p> FAQ STUFF </p>
+        <p> <strong> How can I join? </strong> </p>
+        <p> Becoming a memeber means getting a t-shirt and access to the member dashboard. 
+          To join Mobi it's $15 (sorry we only take cash right now). Speak to one of our officers at the end of a Mobi Learn Workshop.</p>
+        <p> <strong> Do I have to be a member to attend Mobi Learn Workshops? </strong> </p>
+        <p> Nope! All our workshops are free to University of Texas at Arlington Students.</p>
+        <p> <strong> I'm not a Computer Science/Computer Engineering/Software Engineering Major. Can I still join? </strong> </p>
+        <p> Of course! Any student of any major can join Mobi and attend workshops.</p>
+        <p> <strong> I don't know how to code. </strong> </p>
+        <p> That is prefectly fine! Our workshops are for beginners. </p>
+        <p> <strong> I have an idea for start-up. Can you guys help me create it? </strong> </p>
+        <p> Unfortunatly we can only create projects for Social Coding. But if you have a start-up idea you want to presue on your own and need guidance check out the <a href="https://www.epicmavs.com/startup-lounge"> UTA start-up lounge </a> </p>
+        <p> <strong> I have an idea for a Mobi Social Coding Project. </strong> </p>
+        <p> Hey that's awesome! Tell us about it at the next Social Coding Meeting</p>
       </div>
     </div>
   </div>
@@ -106,6 +115,11 @@
     <p> Office: ERB #437 </p>
     <!-- <a href="https://www.google.com/maps/dir//32.7334689,-97.1135293/@32.7335084,-97.1137224,19z" target="_blank" class="btn btn-holo btn-block marg-top">Open in Maps</a> -->
   </div>
+
+  <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad(1)"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
 
 </body>
 </html>
