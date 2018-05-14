@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link href="../css/fontawesome-all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="../main.css" />
-  <script src="main.js"></script>
+  <script src="../main.js"></script>
 </head>
 <body> 
 
@@ -62,9 +62,9 @@
 	</div>
 	<div class="container text-center">
 		<h2> Upcoming Events </h2>
-				<p> <strong> 11/11/19 NH 105 </strong> iOS Course on iOS things </p>
-				<p> <strong> 11/11/19 NH 105 </strong> iOS Course on iOS things </p>
-				<p> <strong> 11/11/19 NH 105 </strong> iOS Course on iOS things </p>
+		<ul id="calendarList">
+    
+    </ul>
 	</div>
 
 	<!-- Instructors Grid -->
@@ -96,5 +96,10 @@
     <!-- <a href="https://www.google.com/maps/dir//32.7334689,-97.1135293/@32.7335084,-97.1137224,19z" target="_blank" class="btn btn-holo btn-block marg-top">Open in Maps</a> -->
   </div>
 
+
+  <script async defer src="https://apis.google.com/js/api.js"
+    onload="this.onload=function(){};handleClientLoad(5)"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()">
+  </script>
 </body>
 </html>
