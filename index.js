@@ -75,9 +75,7 @@ function appendCalendarList(summary, when, where) {
 	// Append list element to ul html element (unordered list) in Workshop.html 
 	document.getElementById("calendarList").appendChild(li);
 
-
-	document.getElementById("loader").style.display = "none";
-  document.getElementById("calendarList").style.display = "block";
+	showPage()
 
 }
 
@@ -146,12 +144,12 @@ function listUpcomingEvents() {
 					var description = event.description;
 					MAX_EVENTS <= 1 ? appendCalendarCard(event.summary, when, where, description) :
 					appendCalendarList(event.summary, when, where)
-
+				
 				}
 			} else {
 				MAX_EVENTS <= 1 ? appendCalendarCard('No upcoming events found.') :
 				 appendCalendarList('No upcoming Events')
-				
+
 			}
 		}else{
 			alert('Error: bad response from Google')
