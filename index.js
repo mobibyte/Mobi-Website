@@ -22,6 +22,7 @@ function handleClientLoad(amountOfEventsShown) {
  *  Initializes the API client library 
  */
 function initClient() {
+	
 	gapi.client.init({
 		apiKey: API_KEY,
 		clientId: CLIENT_ID,
@@ -46,6 +47,9 @@ function appendCalendarCard(summary, when, where, description) {
 	if (description != undefined ) {
 		document.getElementById("calandarCarDescription").innerHTML = description
 	}
+
+	showPage()
+
 }
 
 /**
@@ -56,7 +60,7 @@ function appendCalendarList(summary, when, where) {
 	// Create a list element and a h5 element
 	var li = document.createElement("li");
 	var h5 = document.createElement("h5");
-
+	
 	// Add summary (title of event) to a h5 html element and append it to the list element
 	var t = document.createTextNode(`${summary}`);
 	h5.appendChild(t);
@@ -70,6 +74,10 @@ function appendCalendarList(summary, when, where) {
   li.appendChild(dateAndLocation);
 	// Append list element to ul html element (unordered list) in Workshop.html 
 	document.getElementById("calendarList").appendChild(li);
+
+
+	document.getElementById("loader").style.display = "none";
+  document.getElementById("calendarList").style.display = "block";
 
 }
 
@@ -138,6 +146,7 @@ function listUpcomingEvents() {
 					var description = event.description;
 					MAX_EVENTS <= 1 ? appendCalendarCard(event.summary, when, where, description) :
 					appendCalendarList(event.summary, when, where)
+
 				}
 			} else {
 				MAX_EVENTS <= 1 ? appendCalendarCard('No upcoming events found.') :
@@ -148,4 +157,9 @@ function listUpcomingEvents() {
 			alert('Error: bad response from Google')
 		}
 	});
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("content").style.display = "block";
 }
