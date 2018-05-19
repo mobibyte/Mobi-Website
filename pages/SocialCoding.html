@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Mobi</title>
+  <title>Mobi | Social Coding</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -11,14 +11,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link href="../css/fontawesome-all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="../index.css" />
+  <link rel="shortcut icon" type="image/png" href="../images/Favicon.png"/>
   <script src="index.js"></script>
 </head>
 <body> 
 
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="../index.html">Mobi</a>
+<!-- Navigation -->
+<nav class="shadow-sm navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="../index.html"> <img class ="small-img" src="../images/MobiLogo.png" alt="MobiLogo"/> </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -28,22 +29,23 @@
         <li class="nav-item active">
           <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="./About.html">About <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="./Workshops.html">Workshops <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item active">
+        <li class="nav-item">
             <a class="nav-link" href="./SocialCoding.html">Social Coding <span class="sr-only">(current)</span></a>
         </li>
       </ul>
-      <a href="https://member.idappthat.mobi/login"><button type="button" class="btn btn-primary">Login</button></a>
+      <a class="login-btn" href="https://member.idappthat.mobi/login">Login</a>
     </div>
-  </nav>
+</nav>
+
 
   <!-- Jumbotron links to about us page and how to join-->
-  <div class="jumbotron jumbotron-fluid">
+  <div style="margin: 0;" class="light-patterned-background shadow-lg jumbotron jumbotron-fluid">
     <div class="container text-center">
       <h1> Social Coding </h1>
       <h2 class="lead"> Social Coding is held almost every Friday
@@ -59,40 +61,34 @@
   </div>
 
 <!-- Join the Team Grid -->
-<div class="container text-center">
-		<h2 class="text-center"> Join the Team </h2>	
-    <div class="row">
+<div class="container-fluid text-center dark-background shadow-lg">
+  <h2 class="text-center"> Join the Team </h2>	
+  <div class="row">
+    <div class="col-sm">
+      <h6>Join Social Coding! We'll be working together on a project next meeting. You don't have to be a pro to join social coding. Just know the basics of git and have a little background on iOS, Android, Unity or web development. We'll give you some resources to help! Every Social Coding project allows for leadership opurtunities, expirence, and service. </p>
+    </div>
+    <div class="col-sm">
+      <!-- //TODO : Add interest form from google forms -->
+      <!-- Links to a google form for perspective Social Coders -->
+      <a href="https://github.com/idappthat/">
+        <button class="w-50 btn btn-primary btn-lg" > Interest Form </button>
+      </a>
+    </div>
+  </div>
+</div>
+
+  <!-- footer -->
+  <div class="light-background footer row no-gutters text-center">
       <div class="col-sm">
-        <h6>Join Social Coding! We'll be working together on a project next meeting. You don't have to be a pro to join social coding. Just know the basics of git and have a little background on iOS, Android, Unity or web development. We'll give you some resources to help! Every Social Coding project allows for leadership opurtunities, expirence, and service. </p>
+        <a class="pl-2 footer-icon" href = "mailto: uta.mobi@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a class="pl-2 footer-icon" href="https://slack-idappthat.herokuapp.com/"><i class="fab fa-slack-hash"></i></a>
+        <a class="pl-2 footer-icon" href="https://www.facebook.com/MOBI.UTA/"> <i class="fab fa-facebook-f"></i> </a>
+        <a class="pl-2 footer-icon" href="https://github.com/idappthat/"><i class="fab fa-github"></i></a>
       </div>
       <div class="col-sm">
-				<!-- //TODO : Add interest form from google forms -->
-				<!-- Links to a google form for perspective Social Coders -->
-				<a href="https://github.com/idappthat/">
-					<button class="w-50 btn btn-primary btn-lg" > Interest Form </button>
-				</a>
+        <p> Office: ERB #437 · 500 UTA Blvd · Arlington, TX 76019 · USA </p>
       </div>
     </div>
-	</div>
-	
-	<!-- FAQ Sections -->
-	<div class="container">
-			<h2 class="text-center"> FAQ </h2>
-				<p> <strong>I like cats </strong></p>
-				<p> That's cool </p>
-				<p> <strong>I like cats </strong></p>
-				<p> Okay...</p>
-				<p> <strong>I like cats </strong></p>
-				<p> That's cool </p>
-				<p> <strong>I like cats </strong></p>
-				<p> Okay...</p>
-		</div>
-
-  <div>
-    <p> 500 UTA Blvd · Arlington, TX 76019 · USA</p>
-    <p> Office: ERB #437 </p>
-    <!-- <a href="https://www.google.com/maps/dir//32.7334689,-97.1135293/@32.7335084,-97.1137224,19z" target="_blank" class="btn btn-holo btn-block marg-top">Open in Maps</a> -->
-  </div>
 
 </body>
 </html>

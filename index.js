@@ -16,6 +16,8 @@ function handleClientLoad(amountOfEventsShown) {
 	// Number of Events Needed by webpage
 	MAX_EVENTS = amountOfEventsShown
 	gapi.load('client:auth2', initClient);
+
+
 }
 
 /**
@@ -73,8 +75,8 @@ function appendCalendarList(summary, when, where) {
 	dateAndLocation = document.createTextNode(`${formattedDate} in ${where}`);
   li.appendChild(dateAndLocation);
 	// Append list element to ul html element (unordered list) in Workshop.html 
-	document.getElementById("calendarList").appendChild(li);
 
+	document.getElementById("calendarList").appendChild(li);
 	showPage()
 
 }

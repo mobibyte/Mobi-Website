@@ -11,62 +11,65 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
   <link href="./css/fontawesome-all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+  <link rel="shortcut icon" type="image/png" href="./images/Favicon.png"/>
   <script src="./index.js"></script>
 </head>
 
 <body>
+  <!-- Fetches Next event from Google Calendar -->
   <script async defer src="https://apis.google.com/js/api.js"
     onload="this.onload=handleClientLoad(1)"
     onreadystatechange="if (this.readyState === 'complete') this.onload()">
   </script>
 
-
-
-  <div>
-      <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="./index.html">Mobi</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- collapseable navbar links when viewed on phone or tablet  -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-              <a class="nav-link" href="./pages/About.html">About <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-              <a class="nav-link" href="./pages/Workshops.html">Workshops <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-              <a class="nav-link" href="./pages/SocialCoding.html">Social Coding <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-        <a href="https://member.idappthat.mobi/login"><button type="button" class="btn btn-primary">Login</button></a>
-      </div>
-    </nav>
+  <!-- Navigation -->
+  <nav class="shadow-sm navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html"> <img class ="small-img" src="./images/MobiLogo.png" alt="MobiLogo"/> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- collapseable navbar links when viewed on phone or tablet  -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./pages/About.html">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./pages/Workshops.html">Workshops <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="./pages/SocialCoding.html">Social Coding <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <a class="login-btn" href="https://member.idappthat.mobi/login">Login</a>
+    </div>
+  </nav>
   
-    <!-- Jumbotron links to about us page and how to join-->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container text-center">
-        <h1 class="display-2">Mobi</h1>
-        <h2 class="lead">Ya'll want to get learnt?</h2>
-        <a href="#JoinLink"> <button type="button" class="btn btn-primary">How to Join</button> </a>
-        <a href="./pages/About.html"> <button type="button" class="btn btn-primary">About Us</button> </a>
+  <!-- Jumbotron links to about us page and how to join-->
+  <div style="z-index: 22; margin:0px;" class="jumbotron-image shadow-lg jumbotron text-center jumbotron-fluid">
+    <div class="container text-center">
+      <h1 class="display-2">Mobi</h1>
+      <h2 class="display-6"> Learn Real-World App and Web Devlopment skills</h2>
+    </div>
+
+    <div style="margin-top:20px">Join our slack community!</div>
+      <iframe src="https://slack-idappthat.herokuapp.com/iframe?large" class="__slackin" style="border-width: 0px; width: 150px; height: 30px; visibility: visible;" kwframeid="1"></iframe>
+    </div>
+  </div>
+  
+  <!-- Calandar Card Showing next workshop -->
+  <div class="light-patterned-background">
+    <div class="text-center justify-content-center">
+      <h2 class="text-center"> Next Event </h2>
+      <div id="loader">
+        <img src="./images/spinner.svg" alt="mobispinner"/>
       </div>
     </div>
-    
-    <!-- Calandar Card Showing next workshop -->
-    <h2 class="text-center"> Next Event </h2>
-
-    <div class="row justify-content-md-center">
-      <div id="loader">
-        <img src="./images/spinner.svg" alt="mobi spinner"/>
-      </div>
-      <div style="display:none;" id="content" class="animate-bottom card col-sm-12 col-md-6 border-dark">
+    <div style="display:flex"class="text-center justify-content-md-center">
+      <div style="display:none;" id="content" class="animate-bottom col-sm-12 col-md-6 border-dark">
           <div class="card-body">
               <h5 id="calandarCardTitle" class="card-title"> Our next workshop...</h5>
               <p id="calandarCardDate" class="card-text"></p>
@@ -76,34 +79,49 @@
           </div>
       </div>
     </div>
-  
-    <!-- Icons Grid for Mobi Links -->
+  </div>
+        
+        
+
+  <!-- Icons Grid for Mobi Links -->
+  <div style="padding:16px;"class="text-center container-fluid">
     <h2 class="text-center"> Quick Links </h2>
-    <div class="container">
+    <div >
       <div class="row text-center">
-        <div class="col">
+        <div class="col-md-4 col-centered">
           <i href="#" class="fal fa-calendar-alt fa-5x"></i>
           <h3> Calendar </h3>
           <p> Our Mobi Calendar is always up-to-date on all our events, parties, and any hackathons our members find interesting and cool</p>
-          <a href="https://calendar.google.com/calendar/embed?src=uta.mobi%40gmail.com&ctz=America%2FChicago">
-            <button type="button" href="#" class="btn btn-primary">Calendar</button>
-          </a>
   
         </div>
-        <div class="col">
+        <div class="col-md-4 col-centered">
           <i href="#" class="fab fa-facebook-square fa-5x"></i>
           <h3> Facebook </h3>
           <p> Check out our Facebook page for upcoming events and updates. We post live streams and facebook events here </p>
-          <a href="https://www.facebook.com/MOBI.UTA/">
-            <button type="button" href="#" class="btn btn-primary">Facebook</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="https://calendar.google.com/calendar/embed?src=uta.mobi%40gmail.com&ctz=America%2FChicago">
+            <button type="button" href="#" class="btn btn-primary">Calendar</button>
           </a>
+        </div>
+        <div class="col">
+            <a href="https://www.facebook.com/MOBI.UTA/">
+              <button type="button" href="#" class="btn btn-primary">Facebook</button>
+            </a>
         </div>
       </div>
     </div>
+  </div>
+  
+    
+    
   
   <!-- Register for email List -->
-  <h2 class="text-center"> FAQ </h2>
-  <div class="container">
+  <div style="padding-bottom: 8px;"class="shadow-lg dark-background">
+    <h2 class="text-center"> FAQ </h2>
+    <div class="container">
       <div class="row">
         <div class="col-sm">
           <p id="JoinLink"> <strong> How can I join? </strong> </p>
@@ -116,19 +134,28 @@
           <p> <strong> I don't know how to code. </strong> </p>
           <p> That is prefectly fine! Our workshops are for beginners. </p>
           <p> <strong> I have an idea for start-up. Can you guys help me create it? </strong> </p>
-          <p> Unfortunatly we can only create projects for Social Coding. But if you have a start-up idea you want to presue on your own and need guidance check out the <a href="https://www.epicmavs.com/startup-lounge"> UTA start-up lounge </a> </p>
+          <p> Unfortunatly we can only create projects for Social Coding. But if you have a start-up idea you want to presue on your own and need guidance check out the <a style="color: #eeeeeee0; text-decoration-line: underline;" href="https://www.epicmavs.com/startup-lounge"> UTA start-up lounge </a> </p>
           <p> <strong> I have an idea for a Mobi Social Coding Project. </strong> </p>
           <p> Hey that's awesome! Tell us about it at the next Social Coding Meeting</p>
         </div>
       </div>
     </div>
-  
-    <div>
-      <p> 500 UTA Blvd · Arlington, TX 76019 · USA</p>
-      <p> Office: ERB #437 </p>
-      <!-- <a href="https://www.google.com/maps/dir//32.7334689,-97.1135293/@32.7335084,-97.1137224,19z" target="_blank" class="btn btn-holo btn-block marg-top">Open in Maps</a> -->
-    </div>
   </div>
+
+  <!-- footer -->
+  <div class="light-background footer row no-gutters text-center">
+      <div class="col-sm">
+        <a class="pl-2 footer-icon" href = "mailto: uta.mobi@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a class="pl-2 footer-icon" href="https://slack-idappthat.herokuapp.com/"><i class="fab fa-slack-hash"></i></a>
+        <a class="pl-2 footer-icon" href="https://www.facebook.com/MOBI.UTA/"> <i class="fab fa-facebook-f"></i> </a>
+        <a class="pl-2 footer-icon" href="https://github.com/idappthat/"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="col-sm">
+        <p> Office: ERB #437 · 500 UTA Blvd · Arlington, TX 76019 · USA </p>
+      </div>
+  </div>
+    
+  
 
 </body>
 </html>
