@@ -1,3 +1,7 @@
+body {
+  background-color: red;
+}
+
 img {
   width: 150px;
   height: 150px;
@@ -55,7 +59,7 @@ h2 {
 
 .dark-background {
   background-color: #3C4858;
-  color: #eeeeeee0;
+  color: #fff;
 }
 
 .light-background {
