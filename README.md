@@ -36,7 +36,7 @@ http://localhost:8000/index.html
 ## Todo
 
 - [ ] Finish up fixing styles
-- [ ] Add better FAQ Secion
+- [x] Add better FAQ Section
 - [ ] Add Officer Images
 - [ ] Add email form like in [http://idappthat.mobi/](http://idappthat.mobi/)
 - [ ] Fix quick links section
