@@ -16,8 +16,6 @@ function handleClientLoad(amountOfEventsShown) {
 	// Number of Events Needed by webpage
 	MAX_EVENTS = amountOfEventsShown
 	gapi.load('client:auth2', initClient);
-
-
 }
 
 /**
@@ -51,7 +49,6 @@ function appendCalendarCard(summary, when, where, description) {
 	}
 
 	showPage()
-
 }
 
 /**
