@@ -14,15 +14,16 @@ var MAX_EVENTS = 0;
  */
 function handleClientLoad(amountOfEventsShown) {
 	// Number of Events Needed by webpage
-	MAX_EVENTS = amountOfEventsShown
-	gapi.load('client:auth2', initClient);
+	$(document).ready(function () {
+		MAX_EVENTS = amountOfEventsShown
+		gapi.load('client:auth2', initClient);
+	});
 }
 
 /**
  *  Initializes the API client library 
  */
 function initClient() {
-	
 	gapi.client.init({
 		apiKey: API_KEY,
 		clientId: CLIENT_ID,
@@ -159,4 +160,104 @@ function listUpcomingEvents() {
 function showPage() {
   document.getElementById("loader").style.display = "none";
   document.getElementById("content").style.display = "block";
+}
+
+function scrollToForm() {
+	var formElement = document.getElementById('first_name');
+	formElement.scrollIntoView();
+	formElement.focus();
+}
+
+function attemptRegister() {
+	// Bootstrap takes care of some validation for us,
+	// such as a valid email address and required fields
+	const form = document.getElementById('register');
+	const button = document.getElementById('submitBtn');
+
+	if(form[0].value.length <= 1){
+		alert('Please enter your first name');
+		return false;
+	}
+
+	// Check if the last name <= 1
+	if(form[1].value.length <= 1){
+		alert('Please enter your last name');
+		return false;
+	}
+
+	// Check the 10-digit mav id
+	if(form[3].value.length !== 10){
+		alert('Invalid Mav ID');
+		return false;
+	}
+
+	// Create the data object to be sent
+	let data = {
+		'FNAME': null,
+		'LNAME': null,
+		'EMAIL': null,
+		'MAVS': null,
+	};
+
+	// Getting keys of data object
+	let keys = Object.keys(data);
+
+	for (let index = 0; index < form.length - 1; index++) {
+		// Looping through each value in the form and assigning
+		// it to the object by each key
+		const element = form[index];
+		data[keys[index]] = element.value;
+	}
+
+	// Stateful submit button
+	button.disabled = true;
+
+	// Call server
+	register(data)
+	button.disabled = false;
+}
+
+function register(data) {
+	// Creds
+	const u = '5d3eeb8a245375de29b010caa';
+  const id = '0a24065ed9';
+	const url = 'http://idappthat.us7.list-manage.com/subscribe/post-json?u=' + u + '&id=' + id + '&c=?';
+	// Ajax call here
+	$.ajax({
+		url: url,
+    jsonp: "callback",
+    // Tell jQuery we're expecting JSONP
+		dataType: "jsonp",
+		data: data,
+		contentType: 'application/json; charset=utf-8',
+		error: function(err) { alert('Could not register at this time...'); },
+		success: function( response ) {
+			if(response.result !== "success"){
+				displayFailure(response.msg);
+			}
+			else{
+				displaySuccess(response.msg);
+			}
+		}
+	})
+}
+
+function displayFailure(message) {
+	// TODO: 
+	// 1. create an commen element to display error/success message
+	// 2. Set styling
+	const status = document.getElementById('status');
+	status.className = "alert alert-danger";
+	status.innerHTML = message;
+}
+
+function displaySuccess(message) {
+	// 1. See displayFailure
+	// 2. Clear form
+	const status = document.getElementById('status');
+	const form = document.getElementById('register');
+
+	status.className = "alert alert-success";
+	status.innerHTML = message;
+	form.reset();
 }
