@@ -174,15 +174,14 @@ function attemptRegister() {
 	const form = document.getElementById('register');
 	const button = document.getElementById('submitBtn');
 
-	// Check if the first name <= 2
-	if(form[0].value.length <= 2){
-		alert('Please enter first name w/ more than two chars');
+	if(form[0].value.length <= 1){
+		alert('Please enter your first name');
 		return false;
 	}
 
-	// Check if the last name <= 2
-	if(form[1].value.length <= 2){
-		alert('Please enter last name w/ more than two chars');
+	// Check if the last name <= 1
+	if(form[1].value.length <= 1){
+		alert('Please enter your last name');
 		return false;
 	}
 
