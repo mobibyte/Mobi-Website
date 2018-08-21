@@ -233,7 +233,6 @@ function register(data) {
 		contentType: 'application/json; charset=utf-8',
 		error: function(err) { alert('Could not register at this time...'); },
 		success: function( response ) {
-			console.log( response ); // server response
 			if(response.result !== "success"){
 				displayFailure(response.msg);
 			}
