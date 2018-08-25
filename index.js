@@ -104,7 +104,13 @@ function formatDate(when) {
 		// of numbers
 		let dateArray = when.split(/(?:-|T)+/);
 		const year = dateArray[0];
-		let month = dateArray[1].replace("0", ''); //Replace the 05:00 with 5:00
+
+		let month;
+		if (dateArray[1].indexOf("10") === -1){
+			month = dateArray[1].replace("0", ''); //Replace the 05:00 with 5:00
+		} else {
+			month = dateArray[1] //Replace the 05:00 with 5:00
+		}
 		const day = dateArray[2];
 	
 		// If only date given return just the date else return time as well
