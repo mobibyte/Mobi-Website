@@ -77,6 +77,7 @@ function appendCalendarList(summary, when, where = undefined) {
   li.appendChild(dateAndLocation);
 	// Append list element to ul html element (unordered list) in Workshop.html 
 
+	li.style.marginBottom = "24px";
 	document.getElementById("calendarList").appendChild(li);
 	showPage()
 
