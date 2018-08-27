@@ -102,21 +102,27 @@ function formatDate(when) {
 		
 		// Splits 2018-06-15T18:00:00-05:00 or 2018-12-20 into an array 
 		// of numbers
-		var dateArray = when.split(/(?:-|T)+/);
+		let dateArray = when.split(/(?:-|T)+/);
 		const year = dateArray[0];
-		var month = dateArray[1].replace("0", ''); //Replace the 05:00 with 5:00
+
+		let month;
+		if (dateArray[1].indexOf("10") === -1){
+			month = dateArray[1].replace("0", ''); //Replace the 05:00 with 5:00
+		} else {
+			month = dateArray[1] //Replace the 05:00 with 5:00
+		}
 		const day = dateArray[2];
 	
 		// If only date given return just the date else return time as well
 		if (dateArray.length <= 3) {
-			return `${ monthNames[month]} ${day}, ${year}`;
+			return `${ monthNames[month-1]} ${day}, ${year}`;
 		} else {
 			var time = dateArray[4].replace("0", '');
 			var ampm = "0"
 			// if the 24 hour time doesn't contain a 0 as the first element ie 17:00
 			// it it pm
 			dateArray[3][0] == '0' ? ampm = "am" : ampm = "pm"
-			return `${ monthNames[month]} ${day}, ${year} ${time} ${ampm}`
+			return `${ monthNames[month-1]} ${day}, ${year} ${time} ${ampm}`
 		}
 	}
 	return '';
@@ -135,15 +141,13 @@ function listUpcomingEvents() {
 		'maxResults': MAX_EVENTS,
 		'orderBy': 'startTime'
 	}).then(function(response) {
-		console.log(response)
 		if(response.status >= 200 && response.status < 400){
 
 			var events = response.result.items;
-			
 			if (events.length > 0) {
 				for (i = 0; i < events.length; i++) {
-					var event = events[i];
-					var when = event.start.dateTime;
+					let event = events[i];
+					let when = event.start.dateTime;
 					if (!when) {
 						when = event.start.date;
 					}
