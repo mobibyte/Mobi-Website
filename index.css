@@ -98,6 +98,37 @@ h2 {
        animation: fadein 3s;
 }
 
+i.fab.fa-angular {
+  font-size: 85px;
+}
+
+i.fab.fa-react {
+  font-size: 85px;
+}
+i.fab.fa-vuejs {
+  font-size: 85px;
+}
+i.fab.fa-html5 {
+  font-size: 85px;
+}
+i.fab.fa-android {
+  font-size: 85px;
+}
+i.fab.fa-apple {
+  font-size: 85px;
+}
+i.fab.fa-node::before {
+  font-size: 85px;
+}
+
+i.fab.fa-css3-alt {
+  font-size: 85px;
+}
+.fa-database:before {
+  font-size: 70px;
+  padding:10px;
+}
+
 @keyframes fadein {
 from { opacity: 0; }
 to   { opacity: 1; }
