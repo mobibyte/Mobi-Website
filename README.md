@@ -21,6 +21,8 @@ http://localhost:8000/index.html
 
 2.Run this command  
 `python -m http.server 8000`
+Version 2.7
+`python -m SimpleHTTPServer 8000`
 
 3.Open your favorite broswer and go to this url  
 http://localhost:8000/index.html
@@ -37,7 +39,7 @@ http://localhost:8000/index.html
 
 - [ ] Finish up fixing styles
 - [x] Add better FAQ Section
-- [ ] Add Officer Images
+- [x] Add Officer Images
 - [ ] Add email form like in [http://idappthat.mobi/](http://idappthat.mobi/)
 - [ ] Fix quick links section
 - [ ] Add an interest form for Social Coding / Hackathons
