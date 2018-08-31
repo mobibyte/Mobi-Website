@@ -21,6 +21,8 @@ http://localhost:8000/index.html
 
 2.Run this command  
 `python -m http.server 8000`
+Version 2.7
+`python -m SimpleHTTPServer 8000`
 
 3.Open your favorite broswer and go to this url  
 http://localhost:8000/index.html
