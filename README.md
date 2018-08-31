@@ -39,7 +39,7 @@ http://localhost:8000/index.html
 
 - [ ] Finish up fixing styles
 - [x] Add better FAQ Section
-- [ ] Add Officer Images
+- [x] Add Officer Images
 - [ ] Add email form like in [http://idappthat.mobi/](http://idappthat.mobi/)
 - [ ] Fix quick links section
 - [ ] Add an interest form for Social Coding / Hackathons
