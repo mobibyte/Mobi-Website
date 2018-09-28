@@ -1,6 +1,6 @@
 // Client ID and API key from the Developer Console
-var CLIENT_ID = '840378642603-vr7diou9alhl1ommuc3cbv07g4k0mitg.apps.googleusercontent.com';
-var API_KEY = 'AIzaSyATVOyGatTGNGb8arjg04PNbWHSzqbIIrA';
+var CLIENT_ID = '840378642603-9ssjr5mnoc1h0itojl37717fin56bb32.apps.googleusercontent.com';
+var API_KEY = 'AIzaSyDlOwt4WQh_Hr-ngkTgGst2p0rMZdUGPpw';
 var CALENDAR_ID = 'uta.mobi@gmail.com';
 // Array of API discovery doc URLs for APIs used by the quickstart
 var DISCOVERY_DOCS = ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"];
