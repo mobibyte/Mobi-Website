@@ -234,7 +234,7 @@ function register(data) {
 	// Creds
 	const u = '5d3eeb8a245375de29b010caa';
   const id = '0a24065ed9';
-	const url = 'http://idappthat.us7.list-manage.com/subscribe/post-json?u=' + u + '&id=' + id + '&c=?';
+	const url = 'https://idappthat.us7.list-manage.com/subscribe/post-json?u=' + u + '&id=' + id + '&c=?';
 	// Ajax call here
 	$.ajax({
 		url: url,
