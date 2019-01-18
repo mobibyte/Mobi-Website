@@ -3,7 +3,7 @@
 ## To Run for the first time
 
 1.Clone the repo  
-`git clone https://github.com/maryehuerta/Mobi-Website.git`
+`git clone git@github.com:idappthat/Mobi-Website.git`
 
 2.Go into the directory  
 `cd Mobi-Website`
@@ -37,9 +37,9 @@ http://localhost:8000/index.html
 
 ## Todo
 
-- [ ] Finish up fixing styles
+- [x] Finish up fixing styles
 - [x] Add better FAQ Section
 - [x] Add Officer Images
-- [ ] Add email form like in [http://idappthat.mobi/](http://idappthat.mobi/)
-- [ ] Fix quick links section
-- [ ] Add an interest form for Social Coding / Hackathons
+- [x] Add email form like in [http://idappthat.mobi/](http://idappthat.mobi/)
+- [x] Fix quick links section
+- [x] Add an interest form for Social Coding / Hackathons
