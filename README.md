@@ -9,10 +9,10 @@
 `cd Mobi-Website`
 
 3.Run this command  
-`python -m http.server 8000`
+`python -m http.server 8080`
 
 4.Open your favorite broswer and go to this url  
-http://localhost:8000/index.html
+http://localhost:8080/index.html
 
 ## To Run after the first time
 
@@ -20,12 +20,12 @@ http://localhost:8000/index.html
 `cd Mobi-Website`
 
 2.Run this command  
-`python -m http.server 8000`
+`python -m http.server 8080`
 Version 2.7
-`python -m SimpleHTTPServer 8000`
+`python -m SimpleHTTPServer 8080`
 
 3.Open your favorite broswer and go to this url  
-http://localhost:8000/index.html
+http://localhost:8080/index.html
 
 ## Tips for making changes
 
@@ -37,9 +37,4 @@ http://localhost:8000/index.html
 
 ## Todo
 
-- [x] Finish up fixing styles
-- [x] Add better FAQ Section
-- [x] Add Officer Images
-- [x] Add email form like in [http://idappthat.mobi/](http://idappthat.mobi/)
-- [x] Fix quick links section
-- [x] Add an interest form for Social Coding / Hackathons
+- [ ] Add in Mobi Dashboard link
