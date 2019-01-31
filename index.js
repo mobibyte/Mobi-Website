@@ -97,7 +97,7 @@ function formatDate(when) {
 	if (when !== '') {
 		const monthNames = ["January", "February", "March", "April", "May", "June",
 		"July", "August", "September", "October", "November", "December"];
-		
+
 		// Splits 2018-06-15T18:00:00-05:00 or 2018-12-20 into an array 
 		// of numbers
 		let dateArray = when.split(/(?:-|T)+/);
@@ -115,12 +115,18 @@ function formatDate(when) {
 		if (dateArray.length <= 3) {
 			return `${ monthNames[month-1]} ${day}, ${year}`;
 		} else {
-			var time = dateArray[4].replace("0", '');
-			var ampm = "0"
+			// Get the time array from 2018-06-15T18:00:00-05:00
+			// splits time into [hh, mm, ss] ie [18,00,00]
+			const time = dateArray[3].split(':');
+			let hour = parseInt(time[0], 10);
+			// if the time is after noon 12pm subtract 12 from it 18 becomes 6pm
+			if (hour > 12) { hour = hour - 12 };
+
+			let ampm = "pm"
 			// if the 24 hour time doesn't contain a 0 as the first element ie 17:00
 			// it it pm
 			dateArray[3][0] == '0' ? ampm = "am" : ampm = "pm"
-			return `${ monthNames[month-1]} ${day}, ${year} ${time} ${ampm}`
+			return `${ monthNames[month-1]} ${day}, ${year} at ${hour} ${ampm}`
 		}
 	}
 	return '';
