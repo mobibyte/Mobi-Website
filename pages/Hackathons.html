@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mobi | Workshops</title>
+    <title>Mobi | About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link href="../css/fontawesome-all.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="../index.css" />
     <link rel="shortcut icon" type="image/png" href="../images/Favicon.png" />
@@ -36,14 +37,14 @@
                 <li class="nav-item">
                     <a class="nav-link" href="./About.html">About <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item">
                     <a class="nav-link" href="./Workshops.html">Workshops <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./SocialCoding.html">Social Coding <span
                             class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="./Hackathons.html">Hackathons <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
@@ -54,69 +55,33 @@
         </div>
     </nav>
 
+    <!--  -->
     <div class="mx-1 mx-md-5">
         <!-- Jumbotron links to about us page and how to join-->
-        <div style="margin:0px; margin-bottom: 16px; margin-top: 16px;"
-            class="dark-background jumbotron jumbotron-fluid">
+        <div style="margin:0px; margin-top: 16px; margin-bottom: 32px;"
+            class="shadow-lg dark-background  jumbotron jumbotron-fluid">
             <div class="container text-center">
-                <h1> Mobi Workshops </h1>
-                <h2 class="lead">
-                    Mobi Learn is open to anyone and is completely free to UTA Students!<br /><br />
-                    We will give you the tools and tips to get you started on your own projects. All you need to do is
-                    show
-                    up!<br /><br />
-                    Checkout any of our past or current workshop projects by going to our <a
-                        style="color: #eeeeeee0; text-decoration-line: underline;" href="https://github.com/idappthat/"
-                        target="_blank">GitHub</a>.
+                <h1> Hackathon Experience </h1>
+                <h2 class="lead">Mobi is heavily involved with hackathons. Check out some of our current teams and wins!
                 </h2>
             </div>
         </div>
 
-
-        <!-- Event Calendar List -->
-        <div style="margin-bottom: 16px;" class="shadow-lg light-patterned-background container-fluid text-center">
-            <h2 style="margin:0px"> Upcoming Events </h2>
-            <div id="loader">
-                <img src="../images/spinner.svg" alt="mobi spinner" />
-            </div>
-            <div style="padding-top: 24px; padding-bottom: 32px; display:none;" id="content" class="animate-bottom">
-                <ul id="calendarList">
-
-                </ul>
+        <!-- Icons Grid -->
+        <div style="padding-top:24px; margin-bottom: 16px;" class="shadow-lg light-patterned-background">
+            <h2 style="padding-bottom:24px;" class="text-center"> HackUTA 2019 </h2>
+            <div class="container text-center" id="foo">
             </div>
         </div>
 
+    </div>
 
-        <!-- Instructors Grid -->
-        <div style="padding-top: 24px; padding-bottom: 32px; margin-bottom: 16px;" class="shadow-lg dark-background">
-            <h2 class="text-center"> Meet the Instructors </h2>
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-sm">
-                        <img src="../images/president.jpg" alt="President"
-                            class="shadow img-circular img-thumbnail rounded-circle">
-                        <h4 style="padding-top: 16px;"> Web, Backend, VR/AR </h4>
-                        <h5>Zachery Gentry</h5>
-                    </div>
-                    <div class="col-sm">
-                        <img src="../images/vicePresident.jpg" alt="President"
-                            class="shadow img-circular img-thumbnail rounded-circle">
-                        <h4 style="padding-top: 16px;"> UX, Design, Web </h4>
-                        <h5>Long Nguyen</h5>
-                    </div>
-                    <div class="col-sm">
-                        <img src="../images/ executiveOfficer_ivan.jpg" alt="Executive Officer"
-                            class="shadow img-circular img-thumbnail rounded-circle">
-                        <h4 style="padding-top: 16px;">Web, Sound</h4>
-                        <h5>Ivan Jaimes</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
+    </div>
+
     </div>
 
     <!-- footer -->
-    <div class="shadow-lg light-background footer row no-gutters text-center">
+    <div class="light-background footer row no-gutters text-center shadow-lg">
         <div class="col-sm">
             <a class="pl-2 footer-icon" href="mailto: uta.mobi@gmail.com"><i class="fas fa-envelope"></i></a>
             <a class="pl-2 footer-icon" href="https://slack-idappthat.herokuapp.com/"><i
@@ -129,11 +94,6 @@
             <p> Office: ERB #437 · 500 UTA Blvd · Arlington, TX 76019 · USA </p>
         </div>
     </div>
-
-    <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad(3)"
-        onreadystatechange="if (this.readyState === 'complete') this.onload()">
-    </script>
-
 </body>
 
 </html>
