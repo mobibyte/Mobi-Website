@@ -87,9 +87,10 @@ h2 {
 }
 
 .small-img {
-  width: 30px;
-  height: 30px;
+  width: 40.395px;
+  height: 43.98px;
 }
+
 .animate-bottom {
   -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
   -moz-animation: fadein 3s; /* Firefox < 16 */
