@@ -36,39 +36,6 @@ function initClient() {
     });
 }
 
-const fetchUsers = () => {
-  axios
-    .get("https://mobi-hack.herokuapp.com/attendees")
-    .then(response => {
-      const users = response.data;
-      let list = document.createElement("ul");
-      for (let i = 0; i < users.length; i++) {
-        // Create the list item:
-        if (users[i].length !== 0) {
-          let item = document.createElement("li");
-          let text = users[i][0];
-          if (text.includes("Mobi")) {
-            item.style.color = "#2c3e50";
-            item.style.fontSize = "32px";
-            let img = document.createElement("img");
-            img.src =
-              "https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
-          }
-          item.appendChild(document.createTextNode(text));
-          list.appendChild(item);
-        } else {
-          let item = document.createElement("br");
-          list.appendChild(item);
-        }
-      }
-      document.getElementById("foo").appendChild(list);
-      console.log(`GET list users`, users);
-    })
-    .catch(error => console.error(error));
-};
-
-fetchUsers();
-
 /**
  *  Replace the current text in Calandar Card (in index.html) with most current event's
  *  Summary and Date.
