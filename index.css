@@ -87,8 +87,8 @@ h2 {
 }
 
 .small-img {
-  width: 40.395px;
-  height: 43.98px;
+  max-height: 42px;
+  width: auto;
 }
 
 .animate-bottom {
