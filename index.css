@@ -17,6 +17,11 @@ h2 {
   padding-bottom: 8px;
 }
 
+.discord-invite{
+  width: 200px;
+  height: 64px;
+}
+
 .col-centered{
   float: none;
   margin: 0 auto;
