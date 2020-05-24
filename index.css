@@ -2,10 +2,7 @@ body {
   background-color: #ecebeb;
 }
 
-img {
-  width: 150px;
-  height: 150px;
-}
+
 ul {
   list-style: none;
   padding: 0;
@@ -20,6 +17,10 @@ h2 {
 .discord-invite{
   width: 200px;
   height: 64px;
+}
+
+.portrait {
+  max-height: 150px;
 }
 
 .col-centered{
