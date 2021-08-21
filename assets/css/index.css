@@ -1,0 +1,34 @@
+/* ITCSS — Inverted Triangle CSS 
+   
+   Solving CSS specificity problems one file at a time.
+*/
+
+/* Settings */
+/* Set default values like color and typography here */
+@import "settings";
+
+/* Tools */
+/* More relevant in SCSS (Sass), but put any tools or mixins (Sass) here */
+
+/* Generic */
+/* Any reset or normalization goes here. Setting the CSS settings. */
+
+/* Elements */
+/* Any raw HTML element are styled here */
+@import "elements";
+
+/* Objects */
+/* Any specific object or shared component in the HTML
+ex: stuff like a `layout`, `container`, `drawer` */
+@import "objects";
+
+/* Components */
+/* More specific objects
+ex: `about`, `header`, `footer`, `avatar` */
+@layer components {
+  @import "components";
+}
+
+/* Utilities */
+/* Any special override */
+@import "utilities";

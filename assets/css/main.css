@@ -1,0 +1,6 @@
+/* Custom styling */
+@import "assets/css/components";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
