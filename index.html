@@ -1,364 +1,231 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Mobi</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
-    />
-    <script
-      async
-      defer
-      src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-    ></script>
-    <script
-      async
-      defer
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
-    ></script>
-    <script
-      async
-      defer
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
-    ></script>
-    <link href="./css/fontawesome-all.css" rel="stylesheet" />
-    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
-    <link rel="shortcut icon" type="image/png" href="./images/Favicon.png" />
-    <script type="text/javascript" src="./index.js"></script>
-  </head>
 
-  <body style="background-color: #ecebeb;">
-    <!-- Fetches Next event from Google Calendar -->
-    <script
-      async
-      defer
-      src="https://apis.google.com/js/api.js"
-      onload="this.onload=handleClientLoad(1)"
-      onreadystatechange="if (this.readyState === 'complete') this.onload()"
-    ></script>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Mobi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+  <script async defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script async defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="./css/fontawesome-all.css" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+  <link rel="shortcut icon" type="image/png" href="./images/Favicon.png" />
+  <script type="text/javascript" src="./index.js"></script>
+</head>
 
-    <!-- Navigation -->
-    <nav class="shadow-sm navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="./index.html">
-        <img class="small-img" src="./images/MobiLogo.png" alt="MobiLogo" />
+<body style="background-color: #ecebeb;">
+  <!-- Fetches Next event from Google Calendar -->
+  <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=handleClientLoad(1)"
+    onreadystatechange="if (this.readyState === 'complete') this.onload()"></script>
+
+  <!-- Navigation -->
+  <nav class="shadow-sm navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="./index.html">
+      <img class="small-img" src="./images/MobiLogo.png" alt="MobiLogo" />
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- collapseable navbar links when viewed on phone or tablet  -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/About.html">About <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/Workshops.html">Workshops <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/SocialCoding.html">Social Coding <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./pages/Hackathons.html">Hackathons <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://bit.ly/2xZy72Q">History<span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+      <!-- <a class="login-btn" href="https://member.idappthat.mobi/login">Login</a> -->
+    </div>
+  </nav>
+
+  <div class="mx-1 mx-md-5">
+    <!-- Jumbotron links to about us page and how to join-->
+    <div style="z-index: 1; margin: 0px; margin-top: 16px; margin-bottom: 32px;"
+      class="jumbotron-image shadow-lg jumbotron text-center jumbotron-fluid">
+      <div class="container text-center">
+        <h1 class="display-2">Mobi</h1>
+        <h2 class="display-6">Learn Real-World Development Skills</h2>
+      </div>
+
+      <a href="https://discord.gg/edTYppVYgA">
+        <img src="images/discordButton.png" alt="Join our Discord!" class="discord-invite" />
       </a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <!-- collapseable navbar links when viewed on phone or tablet  -->
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="./index.html"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/About.html"
-              >About <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/Workshops.html"
-              >Workshops <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/SocialCoding.html"
-              >Social Coding <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./pages/Hackathons.html"
-              >Hackathons <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="http://bit.ly/2xZy72Q"
-              >History<span class="sr-only">(current)</span></a
-            >
-          </li>
-        </ul>
-        <!-- <a class="login-btn" href="https://member.idappthat.mobi/login">Login</a> -->
-      </div>
-    </nav>
+    </div>
 
-    <div class="mx-1 mx-md-5">
-      <!-- Jumbotron links to about us page and how to join-->
-      <div
-        style="z-index: 1; margin: 0px; margin-top: 16px; margin-bottom: 32px;"
-        class="jumbotron-image shadow-lg jumbotron text-center jumbotron-fluid"
-      >
-        <div class="container text-center">
-          <h1 class="display-2">Mobi</h1>
-          <h2 class="display-6">Learn Real-World Development Skills</h2>
+    <!-- Icons Grid for Mobi Links -->
+    <div style="padding: 16px; margin-bottom: 16px;"
+      class="text-center container-fluid light-patterned-background shadow-lg">
+      <h2 class="text-center">Quick Links</h2>
+      <div class="row container mx-auto">
+        <!-- Join -->
+        <div class="col">
+          <div class="col-md">
+            <i class="fas fa-users fa-5x"></i>
+          </div>
+          <div class="col">
+            <button onclick="scrollToForm()" type="button" class="btn btn-primary">
+              Join
+            </button>
+          </div>
         </div>
 
-        <!-- Old Slack Invite-->
-        <!-- <div style="margin-top:24px;">
-                Join our slack community <a style="color: #eeeeeee0; text-decoration-line: underline;"
-                    href="https://slack-idappthat.herokuapp.com/">here</a>!
-            </div>
-            <iframe src="https://slack-idappthat.herokuapp.com/iframe?large" class="__slackin"
-                style="border-width: 0px; width: 165px; height: 30px; visibility: visible; margin-top:16px"
-                kwframeid="1"></iframe> -->
-
-        <a href="https://discord.gg/GnTPxEz">
-          <img
-            src="images/discordButton.png"
-            alt="Join our Discord!"
-            class="discord-invite"
-          />
-        </a>
-      </div>
-
-      <!-- Icons Grid for Mobi Links -->
-      <div
-        style="padding: 16px; margin-bottom: 16px;"
-        class="text-center container-fluid light-patterned-background shadow-lg"
-      >
-        <h2 class="text-center">Quick Links</h2>
-        <div class="row">
-          <!-- Join -->
+        <div class="col">
+          <div class="col-md">
+            <i href="#" class="fal fa-calendar-alt fa-5x"></i>
+          </div>
           <div class="col">
-            <div class="col-md">
-              <i class="fas fa-users fa-5x"></i>
-            </div>
-            <div class="col">
-              <button
-                onclick="scrollToForm()"
-                type="button"
-                class="btn btn-primary"
-              >
-                Join
+            <a href="https://calendar.google.com/calendar/embed?src=uta.mobi%40gmail.com&ctz=America%2FChicago">
+              <button type="button" href="#" class="btn btn-primary">
+                Calendar
               </button>
-            </div>
+            </a>
           </div>
-          <!-- Facebook -->
-          <div class="col">
-            <div class="col-md">
-              <i href="#" class="fab fa-facebook-square fa-5x"></i>
-            </div>
-            <div class="col">
-              <a href="https://www.facebook.com/MOBI.UTA/">
-                <button type="button" href="#" class="btn btn-primary">
-                  Facebook
-                </button>
-              </a>
-            </div>
-          </div>
-
-          <div class="col">
-            <div class="col-md">
-              <i href="#" class="fal fa-calendar-alt fa-5x"></i>
-            </div>
-            <div class="col">
-              <a
-                href="https://calendar.google.com/calendar/embed?src=uta.mobi%40gmail.com&ctz=America%2FChicago"
-              >
-                <button type="button" href="#" class="btn btn-primary">
-                  Calendar
-                </button>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Calandar Card Showing next workshop -->
-      <div class="dark-background shadow-lg">
-        <div class="text-center justify-content-center">
-          <h2 class="text-center">Next Event</h2>
-          <div id="loader">
-            <img src="./images/spinner.svg" alt="mobispinner" />
-          </div>
-        </div>
-
-        <div
-          style="display: flex; margin-bottom: 16px;"
-          class="text-center justify-content-md-center"
-        >
-          <div
-            style="display: none;"
-            id="content"
-            class="animate-bottom col-sm-12 col-md-6 border-dark"
-          >
-            <div class="card-body">
-              <h5 id="calandarCardTitle" class="card-title">
-                Our next workshop...
-              </h5>
-              <p id="calandarCardDate" class="card-text"></p>
-              <p id="calandarCardLocation" class="card-text"></p>
-              <p id="calandarCarDescription" class="card-text"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FAQ -->
-      <div
-        style="padding-bottom: 8px; margin-bottom: 16px;"
-        class="shadow-lg dark-background"
-      >
-        <h2 class="text-center">FAQ</h2>
-        <div class="container">
-          <div class="row">
-            <div class="col-sm">
-              <h4 class="mv">
-                <strong> Do I pay to attend Mobi Learn Workshops?</strong>
-              </h4>
-              <p>
-                Nope! All our workshops are free to the University of Texas at
-                Arlington Students.
-              </p>
-
-              <h4 id="JoinLink">
-                <strong> How do I become a member? </strong>
-              </h4>
-              <p>
-                Becoming a member means getting a t-shirt and access to the
-                member dashboard. Speak to one of our officers at the end of a
-                Mobi Learn Workshop.
-              </p>
-
-              <h4>
-                <strong>
-                  I’m not an Engineering Major. Can I still join?
-                </strong>
-              </h4>
-              <p>
-                Of course! Any student of any major can join Mobi and attend
-                workshops, we encourage it.
-              </p>
-
-              <h4><strong> But I don't know how to code! </strong></h4>
-              <p>That is perfectly fine! Our workshops are for beginners.</p>
-
-              <h4>
-                <strong>
-                  I have an idea for a start-up. Can you guys help me create it?
-                </strong>
-              </h4>
-              <p>
-                Unfortunately, we only create projects for Social Coding and
-                hackathons. But if you have a start-up idea you want to pursue
-                on your own and need guidance check out the
-                <a
-                  style="color: #eeeeeee0; text-decoration-line: underline;"
-                  href="https://www.epicmavs.com/startup-lounge"
-                  >EpicMavs Startup Lounge</a
-                >!
-              </p>
-
-              <h4>
-                <strong>
-                  I have an idea for a Mobi Social Coding Project.
-                </strong>
-              </h4>
-              <p>
-                Awesome! Tell us about it at the next Social Coding Meeting!
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        style="padding: 16px; margin-bottom: 16px;"
-        class="shadow-lg light-patterned-background container-fluid"
-      >
-        <div class="container">
-          <div>
-            <h4 class="text-center">Register to our email list for updates!</h4>
-          </div>
-          <div id="status" role="alert"></div>
-          <form id="register" onsubmit="attemptRegister(); return false">
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="first_name">First Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="first_name"
-                  placeholder="First Name"
-                  required
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="last_name">Last Name</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="last_name"
-                  placeholder="Last Name"
-                  required
-                />
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="email_address">Email Address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="email_address"
-                  placeholder="Email Address"
-                  required
-                />
-              </div>
-              <div class="form-group col-md-6">
-                <label for="mav_id">Mav ID 1000 Number</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="mav_id"
-                  placeholder="1000 Number"
-                  required
-                />
-              </div>
-              <!-- For now -->
-              <input
-                id="submitBtn"
-                class="btn btn-primary"
-                type="submit"
-                value="Submit"
-              />
-            </div>
-          </form>
         </div>
       </div>
     </div>
 
-    <!-- footer -->
-    <div class="light-background footer row no-gutters text-center">
-      <div class="col-sm">
-        <a class="pl-2 footer-icon" href="mailto: uta.mobi@gmail.com"
-          ><i class="fas fa-envelope"></i
-        ></a>
-        <a class="pl-2 footer-icon" href="https://discord.gg/GnTPxEz"
-          ><i class="fab fa-discord"></i
-        ></a>
-        <a class="pl-2 footer-icon" href="https://www.facebook.com/MOBI.UTA/">
-          <i class="fab fa-facebook-f"></i>
-        </a>
-        <a class="pl-2 footer-icon" href="https://github.com/idappthat/"
-          ><i class="fab fa-github"></i
-        ></a>
+    <!-- Calandar Card Showing next workshop -->
+    <div class="dark-background shadow-lg">
+      <div class="text-center justify-content-center">
+        <h2 class="text-center">Next Event</h2>
+        <div id="loader">
+          <img src="./images/spinner.svg" alt="mobispinner" />
+        </div>
       </div>
-      <div class="col-sm">
-        <p>Office: ERB #437 · 500 UTA Blvd · Arlington, TX 76019 · USA</p>
+
+      <div style="display: flex; margin-bottom: 16px;" class="text-center justify-content-md-center">
+        <div style="display: none;" id="content" class="animate-bottom col-sm-12 col-md-6 border-dark">
+          <div class="card-body">
+            <h5 id="calandarCardTitle" class="card-title">
+              Our next workshop...
+            </h5>
+            <p id="calandarCardDate" class="card-text"></p>
+            <p id="calandarCardLocation" class="card-text"></p>
+            <p id="calandarCarDescription" class="card-text"></p>
+          </div>
+        </div>
       </div>
     </div>
-  </body>
+
+    <!-- FAQ -->
+    <div style="padding-bottom: 8px; margin-bottom: 16px;" class="shadow-lg dark-background">
+      <h2 class="text-center">FAQ</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h4 class="mv">
+              <strong> Do I pay to attend Mobi Learn Workshops?</strong>
+            </h4>
+            <p>
+              Nope! All our workshops are free to anyone.
+            </p>
+
+            <h4 id="JoinLink">
+              <strong> How do I become a member? </strong>
+            </h4>
+            <p>
+              Simply join the Discord server <a href="https://discord.gg/edTYppVYgA">here</a>
+            </p>
+
+            <h4>
+              <strong>
+                I’m not an Engineering Major. Can I still join?
+              </strong>
+            </h4>
+            <p>
+              Of course! Any student of any major can join Mobi and attend
+              workshops, we encourage it.
+            </p>
+
+            <h4>
+              <strong>
+                I have an idea for a start-up. Can you guys help me create it?
+              </strong>
+            </h4>
+            <p>
+              Unfortunately, we only create projects for Social Coding and
+              hackathons. But if you have a start-up idea you want to pursue
+              on your own and need guidance check out the
+              <a style="color: #eeeeeee0; text-decoration-line: underline;"
+                href="https://www.facebook.com/UTAStartup/">EpicMavs Startup Lounge</a>!
+            </p>
+
+            <h4>
+              <strong>
+                I have an idea for a Mobi Social Coding Project.
+              </strong>
+            </h4>
+            <p>
+              Awesome! Tell us about it at the next Social Coding Meeting!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="padding: 16px; margin-bottom: 16px;" class="shadow-lg light-patterned-background container-fluid">
+      <div class="container">
+        <div>
+          <h4 class="text-center">Register to our email list for updates!</h4>
+        </div>
+        <div id="status" role="alert"></div>
+        <form id="register" onsubmit="attemptRegister(); return false">
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="first_name">First Name</label>
+              <input type="text" class="form-control" id="first_name" placeholder="First Name" required />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="last_name">Last Name</label>
+              <input type="text" class="form-control" id="last_name" placeholder="Last Name" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="email_address">Email Address</label>
+              <input type="email" class="form-control" id="email_address" placeholder="Email Address" required />
+            </div>
+            <div class="form-group col-md-6">
+              <label for="mav_id">Mav ID 1000 Number</label>
+              <input type="text" class="form-control" id="mav_id" placeholder="1000 Number" required />
+            </div>
+            <!-- For now -->
+            <input id="submitBtn" class="btn btn-primary" type="submit" value="Submit" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="light-background footer row no-gutters text-center">
+    <div class="col-sm">
+      <a class="pl-2 footer-icon" href="mailto: uta.mobi@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a class="pl-2 footer-icon" href="https://discord.gg/edTYppVYgA"><i class="fab fa-discord"></i></a>
+      <a class="pl-2 footer-icon" href="https://github.com/idappthat/"><i class="fab fa-github"></i></a>
+    </div>
+    <div class="col-sm">
+      <p>Office: ERB #437 · 500 UTA Blvd · Arlington, TX 76019 · USA</p>
+    </div>
+  </div>
+</body>
+
 </html>
