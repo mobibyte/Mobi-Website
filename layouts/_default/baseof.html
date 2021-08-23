@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ .Title }}</title>
 
+    {{ $favicon := resources.Get "icons/mobi-logomark.png" }}
+    <link rel="shortcut icon" href="{{ $favicon.Permalink }}" type="image/x-icon">
+
     {{ $styles := resources.Get "css/main.css" | resources.PostCSS (dict "config" "postcss.config.js") }}
 
     {{ if hugo.IsProduction }}
