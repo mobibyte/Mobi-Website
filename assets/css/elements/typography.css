@@ -1,0 +1,8 @@
+@layer base {
+  h1,
+  h2 {
+    font-family: "Space Grotesk", monospace;
+
+    @apply font-bold uppercase;
+  }
+}

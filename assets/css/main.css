@@ -1,5 +1,5 @@
 /* Custom styling */
-@import "assets/css/components";
+@import "assets/css/index";
 
 @tailwind base;
 @tailwind components;

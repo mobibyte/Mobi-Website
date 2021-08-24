@@ -1,0 +1,5 @@
+div.logohybrid {
+  font-family: "Roboto", sans-serif;
+
+  @apply font-bold;
+}

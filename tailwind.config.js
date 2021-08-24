@@ -10,7 +10,14 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    fontFamily: {
+      'sans': "'IBM Plex Sans', sans-serif",
+    },
+    extend: {
+      spacing: {
+        ssection: '4.5rem',
+      },
+    },
   },
   variants: {
     extend: {},
