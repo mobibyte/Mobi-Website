@@ -25,9 +25,7 @@ ex: stuff like a `layout`, `container`, `drawer` */
 /* Components */
 /* More specific objects
 ex: `about`, `header`, `footer`, `avatar` */
-@layer components {
-  @import "components";
-}
+@import "components";
 
 /* Utilities */
 /* Any special override */

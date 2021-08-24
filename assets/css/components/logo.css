@@ -1,5 +1,7 @@
-div.logohybrid {
-  font-family: "Roboto", sans-serif;
+@layer components {
+  div.logohybrid {
+    font-family: "Roboto", sans-serif !important;
 
-  @apply font-bold;
+    @apply font-bold;
+  }
 }
