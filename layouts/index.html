@@ -1,4 +1,21 @@
 {{ define "main" }}
-<h1 class="text-5xl mb-8"> {{ .Params.heroHead }} </h1>
-<p>{{ .Params.heroDescription }}</p>
+<section>
+    <h1 class="text-5xl mb-8"> {{ .Params.heroHead }} </h1>
+    <p>{{ .Params.heroDescription }}</p>
+    <form action="">
+        <div class="form-control">
+            <label class="label"><span class="label-text">First name</span></label>
+            <input type="text" name="fname" id="" class="input input-bordered">
+        </div>
+        <div class="form-control">
+            <label class="label"><span class="label-text">Last name</span></label>
+            <input type="text" name="lname" id="" class="input input-bordered">
+        </div>
+        <div class="form-control mb-6">
+            <label class="label">Email name</label>
+            <input type="email" name="email" id="" class="input input-bordered">
+        </div>
+        <button type="button" class="btn btn-primary btn-block">Sign up</button>
+    </form>
+</section>
 {{ end }}
