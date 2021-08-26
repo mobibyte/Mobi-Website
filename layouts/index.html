@@ -1,21 +1,31 @@
 {{ define "main" }}
-<section>
-    <h1 class="text-5xl mb-8"> {{ .Params.heroHead }} </h1>
-    <p>{{ .Params.heroDescription }}</p>
-    <form action="">
-        <div class="form-control">
-            <label class="label"><span class="label-text">First name</span></label>
-            <input type="text" name="fname" id="" class="input input-bordered">
+<main class="mx-8">
+    <section class="relative mb-ssection">
+        {{/* Foreground */}}
+        <div class="relative z-10">
+            {{ partial "header/navigation.html" . }}
+            <h1 class="text-5xl mb-8"> {{ .Params.heroHead }} </h1>
+            <p class="mb-8">{{ .Params.heroDescription }}</p>
+            <form class="px-6 py-8 bg-white rounded-box" action="">
+                <div class=" form-control">
+                    <label class="label"><span class="label-text">First name</span></label>
+                    <input type="text" name="fname" id="" class="input input-bordered">
+                </div>
+                <div class="form-control">
+                    <label class="label"><span class="label-text">Last name</span></label>
+                    <input type="text" name="lname" id="" class="input input-bordered">
+                </div>
+                <div class="form-control mb-6">
+                    <label class="label">Email name</label>
+                    <input type="email" name="email" id="" class="input input-bordered">
+                </div>
+                <button type="button" class="btn btn-primary btn-block">Sign up</button>
+            </form>
         </div>
-        <div class="form-control">
-            <label class="label"><span class="label-text">Last name</span></label>
-            <input type="text" name="lname" id="" class="input input-bordered">
-        </div>
-        <div class="form-control mb-6">
-            <label class="label">Email name</label>
-            <input type="email" name="email" id="" class="input input-bordered">
-        </div>
-        <button type="button" class="btn btn-primary btn-block">Sign up</button>
-    </form>
-</section>
+        <div class="overlay bg-corner-mobi-blue -inset-x-8 -top-8 z-0"></div>
+    </section>
+    <section>
+        <h1>Testerino</h1>
+    </section>
+</main>
 {{ end }}

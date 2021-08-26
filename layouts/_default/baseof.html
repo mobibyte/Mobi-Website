@@ -20,8 +20,7 @@
 </head>
 
 <body data-theme="">
-    {{ partial "header/navigation.html" . }}
-    <main class="mx-8">{{ block "main" . }}{{ end }}</main>
+    {{ block "main" . }}{{ end }}
 </body>
 
 </html>

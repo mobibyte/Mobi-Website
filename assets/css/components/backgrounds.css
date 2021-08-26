@@ -1,0 +1,11 @@
+.overlay {
+  @apply absolute inset-0;
+}
+
+.bg-corner-mobi-blue {
+  background: radial-gradient(
+    100% 100% at 100% 0%,
+    rgba(0, 149, 255, 0.3) 0%,
+    rgba(196, 196, 196, 0) 100%
+  );
+}
