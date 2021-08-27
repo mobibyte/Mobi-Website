@@ -1,16 +1,15 @@
 {{ define "main" }}
-<main class="mx-8">
+<main class="mx-8 xs sm:mx-28">
     <section class="relative mb-ssection">
         {{/* Foreground */}}
         <div class="relative z-10">
             {{ partial "header/navigation.html" . }}
-            <div class="sm:flex justify-between">
+            <div class="">
                 <div>
                     <h1 class="text-5xl mb-8"> {{ $.Params.heroHead | safeHTML }} </h1>
                     <p class="mb-8 max-w-xs">{{ $.Params.heroDescription }}</p>
                 </div>
-                <form id="signup" class="px-6 py-8 bg-white rounded-box max-w-sm sm:max-w-md sm:flex-1 sm:ml-8"
-                    action="">
+                <form id="signup" class="px-6 py-8 bg-white rounded-box max-w-md" action="">
                     <div class=" form-control mb-6">
                         <label class="label"><span class="label-text">First name</span></label>
                         <input type="text" name="fname" id="" class="input input-bordered">
@@ -27,7 +26,7 @@
                 </form>
             </div>
         </div>
-        <div class="overlay bg-corner-mobi-blue -inset-x-8 -top-8 z-0"></div>
+        <div class="overlay bg-corner-mobi-blue -inset-x-8 -top-8 z-0 sm:-inset-x-28"></div>
     </section>
     <section class="mb-ssection">
         <h2>Register for our Next Meetup</h2>
@@ -39,14 +38,19 @@
         </div>
         <a class="link link-neutral link-hover">Previous ←</a>
     </section>
-    <section id="about" class="mb-ssection py-12 -mx-8 px-8 bg-corner-blurple text-accent-content">
+    <section id="about" class="mb-ssection py-12 -mx-8 sm:-mx-28 px-8 sm:px-28 bg-corner-blurple text-accent-content">
         <h2>We Know the Software Grind</h2>
-        <p>With 12 years of combined experienced, Mobi has a lot to share for folks in the grind. Trust us, we know how
-            confusing and hard learning software devolpment is!</p>
-        <p>That’s why Mobi is here, so y’all can have a place to come to grow as a dev, but also relax and chill. Mobi
-            is an awesome place to talk about whatever’s got your developer spirit going!</p>
-        <p class="mb-8">We’re an org that’s proud to be involved with software, trying to cook up software as much as
-            possible.</p>
+        <div>
+            <p>With 12 years of combined experienced, Mobi has a lot to share for folks in the grind. Trust us, we know
+                how
+                confusing and hard learning software devolpment is!</p>
+            <p>That’s why Mobi is here, so y’all can have a place to come to grow as a dev, but also relax and chill.
+                Mobi
+                is an awesome place to talk about whatever’s got your developer spirit going!</p>
+            <p class="mb-8">We’re an org that’s proud to be involved with software, trying to cook up software as much
+                as
+                possible.</p>
+        </div>
         <div class="relative">
             <img src="about.jpg" class="relative z-10 w-11/12 h-5/6" />
             <div class="bg-corner-blurple border-blurple rounded-box absolute right-0 top-4 h-full w-11/12 z-0" />
