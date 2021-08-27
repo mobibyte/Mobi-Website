@@ -4,23 +4,28 @@
         {{/* Foreground */}}
         <div class="relative z-10">
             {{ partial "header/navigation.html" . }}
-            <h1 class="text-5xl mb-8"> {{ .Params.heroHead }} </h1>
-            <p class="mb-8">{{ .Params.heroDescription }}</p>
-            <form id="signup" class="px-6 py-8 bg-white rounded-box" action="">
-                <div class=" form-control">
-                    <label class="label"><span class="label-text">First name</span></label>
-                    <input type="text" name="fname" id="" class="input input-bordered">
+            <div class="sm:flex justify-between">
+                <div>
+                    <h1 class="text-5xl mb-8"> {{ .Params.heroHead | safeHTML }} </h1>
+                    <p class="mb-8 max-w-xs">{{ .Params.heroDescription }}</p>
                 </div>
-                <div class="form-control">
-                    <label class="label"><span class="label-text">Last name</span></label>
-                    <input type="text" name="lname" id="" class="input input-bordered">
-                </div>
-                <div class="form-control mb-6">
-                    <label class="label">Email name</label>
-                    <input type="email" name="email" id="" class="input input-bordered">
-                </div>
-                <button type="button" class="btn btn-primary btn-block">Sign up</button>
-            </form>
+                <form id="signup" class="px-6 py-8 bg-white rounded-box max-w-sm sm:max-w-md sm:flex-1 sm:ml-8"
+                    action="">
+                    <div class=" form-control">
+                        <label class="label"><span class="label-text">First name</span></label>
+                        <input type="text" name="fname" id="" class="input input-bordered">
+                    </div>
+                    <div class="form-control">
+                        <label class="label"><span class="label-text">Last name</span></label>
+                        <input type="text" name="lname" id="" class="input input-bordered">
+                    </div>
+                    <div class="form-control mb-6">
+                        <label class="label">Email name</label>
+                        <input type="email" name="email" id="" class="input input-bordered">
+                    </div>
+                    <button type="button" class="btn btn-primary btn-block">Sign up</button>
+                </form>
+            </div>
         </div>
         <div class="overlay bg-corner-mobi-blue -inset-x-8 -top-8 z-0"></div>
     </section>
@@ -51,4 +56,5 @@
         <a class="btn btn-primary" href="#signup">Sign up</a>
     </section>
 </main>
+{{ partial "footer/footer.html" . }}
 {{ end }}
