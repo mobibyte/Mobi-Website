@@ -3,10 +3,20 @@
   h2 {
     font-family: "Space Grotesk", monospace;
 
-    @apply font-bold uppercase;
+    @apply font-bold uppercase mb-8;
   }
 
   h2 {
     @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl uppercase;
+  }
+
+  label {
+    font-family: "Space Grotesk", monospace;
+
+    @apply uppercase;
   }
 }
