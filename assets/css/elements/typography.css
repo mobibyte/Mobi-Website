@@ -5,4 +5,8 @@
 
     @apply font-bold uppercase;
   }
+
+  h2 {
+    @apply text-4xl;
+  }
 }
