@@ -1,10 +1,8 @@
-<footer class="mx-8">
-    <div>
-        {{ partial "branding/logo-hybrid.html" . }}
-    </div>
-    <div class="footer">
+<footer class="mx-8 mb-8">
+    <div class="footer text-neutral mb-8">
+        <div class="text-neutral-focus text-xl">{{ partial "branding/logotype.html" . }}</div>
         <article>
-            <span class=" footer-title">Links</span>
+            <span class="footer-title">Links</span>
             <ul>
                 <li><a href="#signup">Sign Up</a></li>
                 <li><a href="#about">About Us</a></li>
@@ -12,11 +10,13 @@
         </article>
         <article>
             <span class="footer-title">Contact</span>
-            <address>
-                500 UTA Blvd, Room 437,<br /> Arlington, TX 76010
-            </address>
-            <a href="mailto:uta.mobi@gmail.com">uta.mobi@gmail.com</a>
+            <div>
+                <address>
+                    500 UTA Blvd, Room 437,<br /> Arlington, TX 76010
+                </address>
+                <a class="link-hover" href="mailto:uta.mobi@gmail.com">uta.mobi@gmail.com</a>
+            </div>
         </article>
     </div>
-    <span>&copy; 2021</span>
+    <span class="text-neutral">&copy; 2021 Mobi</span>
 </footer>

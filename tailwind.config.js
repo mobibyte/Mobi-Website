@@ -17,6 +17,11 @@ module.exports = {
       spacing: {
         ssection: '4.5rem',
       },
+      typography: {
+        css: {
+          fontFamily: "'IBM Plex Sans', sans-serif",
+        }
+      }
     },
   },
   variants: {
@@ -24,8 +29,8 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
-    require('daisyui'),
     require('tailwindcss-logical'),
+    require('daisyui'),
   ],
   daisyui: {
     logs: false,

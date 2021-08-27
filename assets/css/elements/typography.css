@@ -23,4 +23,8 @@
   p {
     @apply mb-4;
   }
+
+  address {
+    @apply not-italic;
+  }
 }
