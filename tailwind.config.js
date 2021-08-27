@@ -13,6 +13,10 @@ module.exports = {
     fontFamily: {
       'sans': "'IBM Plex Sans', sans-serif",
     },
+    colors: {
+      primary: 'var(--color-primary)',
+      secondary: 'var(--color-secondary)',
+    },
     extend: {
       spacing: {
         ssection: '4.5rem',
@@ -41,8 +45,8 @@ module.exports = {
           'primary-focus': '#3D65CB',     /* Primary color - focused */
           'primary-content': '#ffffff',   /* Foreground content color to use on primary color */
 
-          'secondary': '#f6d860',         /* Secondary color */
-          'secondary-focus': '#f3cc30',   /* Secondary color - focused */
+          'secondary': '#3D65CB',         /* Secondary color */
+          'secondary-focus': '#111E90',   /* Secondary color - focused */
           'secondary-content': '#ffffff', /* Foreground content color to use on secondary color */
 
           'accent': '#37cdbe',            /* Accent color */

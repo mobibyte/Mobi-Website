@@ -9,3 +9,14 @@
     rgba(196, 196, 196, 0) 100%
   );
 }
+
+.bg-corner-blurple {
+  background: radial-gradient(
+    213.95% 73.36% at 2.07% 0%,
+    var(--color-secondary) 50%,
+    rgba(61, 101, 203, 0) 100%
+  );
+}
+.border-blurple {
+  @apply border-2 border-secondary;
+}
