@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   purge: {
     enabled: process.env.HUGO_ENVIRONMENT === "production",
@@ -12,6 +14,17 @@ module.exports = {
   theme: {
     fontFamily: {
       'sans': "'IBM Plex Sans', sans-serif",
+    },
+    colors: {
+      primary: 'var(--color-primary)',
+      secondary: 'var(--color-secondary)',
+      neutral: colors.gray,
+      black: colors.black,
+      white: colors.white,
+      gray: colors.coolGray,
+      red: colors.red,
+      yellow: colors.amber,
+      blue: colors.blue
     },
     extend: {
       spacing: {
@@ -41,8 +54,8 @@ module.exports = {
           'primary-focus': '#3D65CB',     /* Primary color - focused */
           'primary-content': '#ffffff',   /* Foreground content color to use on primary color */
 
-          'secondary': '#f6d860',         /* Secondary color */
-          'secondary-focus': '#f3cc30',   /* Secondary color - focused */
+          'secondary': '#3D65CB',         /* Secondary color */
+          'secondary-focus': '#111E90',   /* Secondary color - focused */
           'secondary-content': '#ffffff', /* Foreground content color to use on secondary color */
 
           'accent': '#37cdbe',            /* Accent color */
