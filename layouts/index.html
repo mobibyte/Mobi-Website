@@ -6,7 +6,7 @@
             {{ partial "header/navigation.html" . }}
             <h1 class="text-5xl mb-8"> {{ .Params.heroHead }} </h1>
             <p class="mb-8">{{ .Params.heroDescription }}</p>
-            <form class="px-6 py-8 bg-white rounded-box" action="">
+            <form id="signup" class="px-6 py-8 bg-white rounded-box" action="">
                 <div class=" form-control">
                     <label class="label"><span class="label-text">First name</span></label>
                     <input type="text" name="fname" id="" class="input input-bordered">
@@ -25,7 +25,30 @@
         <div class="overlay bg-corner-mobi-blue -inset-x-8 -top-8 z-0"></div>
     </section>
     <section>
-        <h1>Testerino</h1>
+        <h2>Register for our Next Meetup</h2>
+        <div>
+            <article>
+                <h3>Compiling Code Interviews with Andy</h3>
+                <time>9-26-2021</time>
+            </article>
+        </div>
+        <a>Previous←</a>
+    </section>
+    <section id="about">
+        <h2>We Know the Software Grind</h2>
+        <p>With 12 years of combined experienced, Mobi has a lot to share for folks in the grind. Trust us, we know how
+            confusing and hard learning software devolpment is!</p>
+        <p>That’s why Mobi is here, so y’all can have a place to come to grow as a dev, but also relax and chill. Mobi
+            is an awesome place to talk about whatever’s got your developer spirit going!</p>
+        <p>We’re an org that’s proud to be involved with software, trying to cook up software as much as possible.</p>
+        <div>
+            <img />
+            <div />
+        </div>
+    </section>
+    <section>
+        <h2>Want to Get Involved?</h2>
+        <a class="btn btn-primary" href="#signup">Sign up</a>
     </section>
 </main>
 {{ end }}
