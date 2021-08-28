@@ -19,8 +19,10 @@
     <link href="{{ $styles.Permalink }}" type="text/css" rel="stylesheet" />
 </head>
 
-<body data-theme="">
-    {{ block "main" . }}{{ end }}
+<body data-theme="" class="relative">
+    <div class="overflow-x-hidden">
+        {{ block "main" . }}{{ end }}
+    </div>
 </body>
 
 </html>

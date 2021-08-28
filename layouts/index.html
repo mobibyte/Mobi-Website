@@ -3,10 +3,10 @@
     <section class="relative mb-ssection">
         {{/* Foreground */}}
         <div class="relative z-10">
-            {{ partial "header/navigation.html" . }}
-            <div class="">
+            <div class="relative z-10">
+                {{ partial "header/navigation.html" . }}
                 <div>
-                    <h1 class="text-5xl mb-8"> {{ $.Params.heroHead | safeHTML }} </h1>
+                    <h1 class=" text-5xl mb-8"> {{ $.Params.heroHead | safeHTML }} </h1>
                     <p class="mb-8 max-w-xs">{{ $.Params.heroDescription }}</p>
                 </div>
                 <form id="signup" class="px-6 py-8 bg-white rounded-box max-w-md" action="">
@@ -25,6 +25,8 @@
                     <button type="button" class="btn btn-primary btn-block">Sign up</button>
                 </form>
             </div>
+            <img src="mobi.jpg"
+                class="hidden lg:block object-cover absolute -mr-36 left-2/4 2xl:right-2/4 2xl:w-3/5 2xl:h-full top-36 z-0 h-4/6 -rotate-4 rounded-box" />
         </div>
         <div class="overlay bg-corner-mobi-blue -inset-x-8 -top-8 z-0 sm:-inset-x-28 lg:-inset-x-36 2xl:-inset-x-96">
         </div>
