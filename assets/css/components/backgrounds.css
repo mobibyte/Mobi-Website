@@ -2,7 +2,7 @@
   @apply absolute inset-0;
 }
 
-.bg-corner-mobi-blue {
+.bg-corner-light-mobi-blue {
   background: radial-gradient(
     100% 100% at 100% 0%,
     rgba(0, 149, 255, 0.3) 0%,
@@ -10,13 +10,25 @@
   );
 }
 
+.bg-corner-mobi-blue {
+  background: linear-gradient(
+    212.74deg,
+    #4ca3e1 0.81%,
+    rgba(76, 163, 225, 0) 100.48%
+  );
+}
+
 .bg-corner-blurple {
-  background: radial-gradient(
-    213.95% 73.36% at 2.07% 0%,
-    var(--color-secondary) 50%,
-    rgba(61, 101, 203, 0) 100%
+  background: linear-gradient(
+    177.9deg,
+    #3d65cb 18.98%,
+    rgba(61, 101, 203, 0) 98.27%
   );
 }
 .border-blurple {
   @apply border-2 border-secondary;
+}
+
+.border-mobi-blue {
+  @apply border-2 border-primary;
 }
