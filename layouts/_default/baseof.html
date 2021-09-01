@@ -8,7 +8,7 @@
     <title>{{ .Title }}</title>
 
     {{ $favicon := resources.Get "icons/mobi-logomark.png" }}
-    <link rel="shortcut icon" href="{{ $favicon.Permalink }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}" type="image/x-icon">
 
     {{ $styles := resources.Get "css/main.css" | resources.PostCSS (dict "config" "postcss.config.js") }}
 
@@ -16,7 +16,7 @@
     {{ $styles = $styles | minify }}
     {{ end }}
 
-    <link href="{{ $styles.Permalink }}" type="text/css" rel="stylesheet" />
+    <link href="{{ $styles.RelPermalink }}" type="text/css" rel="stylesheet" />
 </head>
 
 <body data-theme="" class="relative">
