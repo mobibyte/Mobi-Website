@@ -212,4 +212,6 @@
     </section>
     {{ partial "footer/footer.html" . }}
 </main>
+{{ $js := resources.Get "js/home.js" }}
+<script src="{{ $js.RelPermalink }}"></script>
 {{ end }}
