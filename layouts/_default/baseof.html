@@ -8,9 +8,6 @@
     <title>{{ .Title }}</title>
 
     {{ $favicon := resources.Get "icons/mobi-logomark.png" }}
-    {{ if hugo.IsProduction }}
-    {{ $favicon = $favicon }}
-    {{ end }}
     <link rel="shortcut icon" href="{{ $favicon.RelPermalink }}" type="image/x-icon">
 
     {{ $styles := resources.Get "css/main.css" | resources.PostCSS (dict "config" "postcss.config.js") }}
