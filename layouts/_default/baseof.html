@@ -17,6 +17,18 @@
     {{ end }}
 
     <link href="{{ $styles.RelPermalink }}" type="text/css" rel="stylesheet" />
+
+    {{ if hugo.IsProduction }}
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-24V7483FCK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-24V7483FCK');
+    </script>
+    {{ end }}
 </head>
 
 <body data-theme="" class="relative">
