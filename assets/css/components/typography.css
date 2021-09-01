@@ -1,0 +1,16 @@
+@layer components {
+  .body {
+    font-family: "IBM Plex Sans", sans-serif;
+
+    @apply text-base normal-case;
+  }
+
+  .caption {
+    @apply text-xs text-neutral;
+  }
+
+  /* Utilities */
+  .lh--shrink {
+    line-height: 1;
+  }
+}

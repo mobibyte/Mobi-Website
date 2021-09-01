@@ -1,0 +1,88 @@
+{{ define "main" }}
+<main class="mx-8 xs sm:mx-28 lg:mx-36 2xl:mx-96">
+    <section class="relative 2xl:mb-96">
+        {{/* Foreground */}}
+        <div class="relative z-10">
+            <div class="relative z-10">
+                {{ partial "header/navigation.html" . }}
+                <div class="md:mt-44">
+                    <h1 class=" text-5xl mb-8 md:text-6xl"> {{ $.Params.heroHead | safeHTML }} </h1>
+                    <p class="mb-8 max-w-xs">{{ $.Params.heroDescription }}</p>
+                </div>
+                <form id="signup" method="POST"
+                    action="https://idappthat.us7.list-manage.com/subscribe/post?u=5d3eeb8a245375de29b010caa&amp;id=0a24065ed9"
+                    class="px-6 py-8 bg-white rounded-box max-w-md">
+                    <div class=" form-control mb-6">
+                        <label class="label" for="fname"><span class="label-text">First name</span></label>
+                        <input type="text" name="FNAME" id="fname" class="input input-bordered" required>
+                    </div>
+                    <div class="form-control mb-6">
+                        <label class="label" for="lname"><span class="label-text">Last name</span></label>
+                        <input type="text" name="LNAME" id="lname" class="input input-bordered" required>
+                    </div>
+                    <div class="form-control mb-6">
+                        <label class="label" for="email">Mavs Email</label>
+                        <input type="email" id="email" name="EMAIL" id="" class="input input-bordered" required
+                            pattern=".+@.*.?uta.edu"
+                            title="Please provide a valid UTA email (ex: firstname.lastname@mavs.uta.edu)">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Sign up</button>
+                </form>
+            </div>
+            <img src="mobi.jpg"
+                class="hidden lg:block object-cover absolute -mr-36 left-2/4 2xl:right-2/4 2xl:w-3/5 2xl:h-full top-36 z-0 h-4/6 -rotate-4 rounded-box" />
+        </div>
+        <div
+            class="overlay bg-corner-light-mobi-blue -inset-x-8 -top-8 z-0 sm:-inset-x-28 lg:-inset-x-36 2xl:-inset-x-96">
+        </div>
+    </section>
+    <section class="flex">
+        <div class="hidden lg:block relative flex-1">
+            <img src="register.jpg" class="relative z-10 object-contain w-72 top-8 xl:left-12" />
+            <div
+                class="absolute bg-corner-mobi-blue border-mobi-blue rounded-box z-0 left-8 xl:left-24 top-16 xl:top-24 bottom-0 w-72 h-3/4 -rotate-4">
+            </div>
+        </div>
+        <div class="flex-1">
+            <h2>Register for our<br /> Next Meetup</h2>
+            <div>
+                <article class="upnext-container">
+                    <h3 class="body lh--shrink">Compiling Code Interviews with Andy</h3>
+                    <time class="caption">9-26-2021</time>
+                </article>
+            </div>
+            <a class="link link-neutral link-hover">Previous ←</a>
+        </div>
+    </section>
+    <section id="about"
+        class="py-12 -mx-8 sm:-mx-28 lg:-mx-36 2xl:-mx-96 px-8 sm:px-28 sm:py-28 lg:px-36 lg:py-36 2xl:px-96 bg-corner-blurple text-accent-content">
+        <div class="mb-8 max-w-prose xl:max-w-none">
+            <h2>We Know the Software Grind</h2>
+            <div class="x-w-prose xl:grid xl:grid-cols-3 xl:gap-6">
+                <p>With 12 years of combined experienced, Mobi has a lot to share for folks in the grind. Trust us, we
+                    know
+                    how
+                    confusing and hard learning software devolpment is!</p>
+                <p>That’s why Mobi is here, so y’all can have a place to come to grow as a dev, but also relax and
+                    chill.
+                    Mobi
+                    is an awesome place to talk about whatever’s got your developer spirit going!</p>
+                <p class="mb-8">We’re an org that’s proud to be involved with software, trying to cook up software as
+                    much
+                    as
+                    possible.</p>
+            </div>
+        </div>
+        <div class="relative mx-auto">
+            <img src="about.jpg" class="relative z-10 w-11/12 h-64 max-w-md lg:max-w-4xl lg:h-auto object-cover" />
+            <div
+                class="bg-corner-blurple border-blurple rounded-box absolute right-0 top-4 sm:right-auto sm:left-8 h-full w-11/12 sm:max-w-md lg:max-w-4xl lg:top-12 lg:left-16 z-0" />
+        </div>
+    </section>
+    <section class="">
+        <h2 class="text-center mb-4">Want to Get Involved?</h2>
+        <div class="flex justify-center"><a class="btn btn-primary" href="#signup">Sign up</a></div>
+    </section>
+</main>
+{{ partial "footer/footer.html" . }}
+{{ end }}
