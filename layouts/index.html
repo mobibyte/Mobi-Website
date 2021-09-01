@@ -9,20 +9,24 @@
                     <h1 class=" text-5xl mb-8 md:text-6xl"> {{ $.Params.heroHead | safeHTML }} </h1>
                     <p class="mb-8 max-w-xs">{{ $.Params.heroDescription }}</p>
                 </div>
-                <form id="signup" class="px-6 py-8 bg-white rounded-box max-w-md" action="">
+                <form id="signup" method="POST"
+                    action="https://idappthat.us7.list-manage.com/subscribe/post?u=5d3eeb8a245375de29b010caa&amp;id=0a24065ed9"
+                    class="px-6 py-8 bg-white rounded-box max-w-md">
                     <div class=" form-control mb-6">
-                        <label class="label"><span class="label-text">First name</span></label>
-                        <input type="text" name="fname" id="" class="input input-bordered">
+                        <label class="label" for="fname"><span class="label-text">First name</span></label>
+                        <input type="text" name="FNAME" id="fname" class="input input-bordered" required>
                     </div>
                     <div class="form-control mb-6">
-                        <label class="label"><span class="label-text">Last name</span></label>
-                        <input type="text" name="lname" id="" class="input input-bordered">
+                        <label class="label" for="lname"><span class="label-text">Last name</span></label>
+                        <input type="text" name="LNAME" id="lname" class="input input-bordered" required>
                     </div>
                     <div class="form-control mb-6">
-                        <label class="label">Email name</label>
-                        <input type="email" name="email" id="" class="input input-bordered">
+                        <label class="label" for="email">Mavs Email</label>
+                        <input type="email" id="email" name="EMAIL" id="" class="input input-bordered" required
+                            pattern=".+@.*.?uta.edu"
+                            title="Please provide a valid UTA email (ex: firstname.lastname@mavs.uta.edu)">
                     </div>
-                    <button type="button" class="btn btn-primary btn-block">Sign up</button>
+                    <button type="submit" class="btn btn-primary btn-block">Sign up</button>
                 </form>
             </div>
             <img src="mobi.jpg"
