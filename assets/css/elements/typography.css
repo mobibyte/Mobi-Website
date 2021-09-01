@@ -3,11 +3,11 @@
   h2 {
     font-family: "Space Grotesk", monospace;
 
-    @apply font-bold uppercase mb-8;
+    @apply text-4xl md:text-5xl font-bold uppercase mb-8;
   }
 
   h2 {
-    @apply text-4xl md:text-5xl md:mb-12;
+    @apply md:mb-12;
   }
 
   h3 {

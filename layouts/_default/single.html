@@ -1,0 +1,9 @@
+{{ define "main" }}
+<main class="mx-8 xs sm:mx-28 lg:mx-36 2xl:mx-96 flex flex-col min-h-screen">
+    <div class="flex-none">{{ partial "header/navigation.html" . }}</div>
+    <div class="flex-grow">
+        {{ .Content }}
+    </div>
+    <div class="flex-none">{{ partial "footer/footer.html" . }}</div>
+</main>
+{{ end }}
